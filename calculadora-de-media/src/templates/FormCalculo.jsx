@@ -22,33 +22,52 @@ const FormCalculo = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2>
-        <span style={{ color: "green" }}>Calcular</span>{" "}
-        <span style={{ color: "blue" }}>Media</span>
-      </h2>
 
+    <div className="form-container">
       <div className="form-box">
         <form onSubmit={handleSubmit}>
+          <label>Materia</label>
+          <input 
+            type="text" 
+            placeholder="Digite o nome da materia" 
+            value={materia} 
+            onChange={(e) => setMateria(e.target.value)} 
+            required 
+          />
+          <label>Nota da Np1</label>
           <input
-            type="text"
-            placeholder="Matéria"
-            value={materia}
-            onChange={(e) => setMateria(e.target.value)}
+            type="number"
+            placeholder="Digite a nota da Np1"
+            value={notas[0]}
+            onChange={(e) => handleChangeNota(0, e.target.value)}
             required
           />
-          {notas.map((nota, i) => (
-            <input
-              key={i}
-              type="number"
-              placeholder={`Nota ${i + 1}`}
-              value={nota}
-              onChange={(e) => handleChangeNota(i, e.target.value)}
-              required
-            />
-          ))}
-          <button type="submit">
+          <label>Nota da Np2</label>
+          <input
+            type="number"
+            placeholder="Digite a nota da Np2"
+            value={notas[1]}
+            onChange={(e) => handleChangeNota(1, e.target.value)}
+            required
+          />
+          <label>Nota do PIM</label>
+          <input
+            type="number"
+            placeholder="Digite a nota do PIM"
+            value={notas[2]}
+            onChange={(e) => handleChangeNota(2, e.target.value)}
+            required
+          />
+
+          <button className="botao-azul" type="submit">
             Calcular
+          </button>
+          <button
+            type="button"
+            className="botao-azul"
+            onClick={() => navigate('/')}
+          >
+            Voltar
           </button>
         </form>
       </div>
@@ -56,4 +75,4 @@ const FormCalculo = () => {
   );
 }
 
-export default FormCalculo
+export default FormCalculo;

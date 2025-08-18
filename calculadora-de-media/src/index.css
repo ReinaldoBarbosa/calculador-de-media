@@ -129,21 +129,17 @@ body {
 /* FORM */
 .form-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.form-container h2 {
-  margin-bottom: 15px;
-  text-align: center;
+  padding: 50px 0;
 }
 
 .form-box {
   background-color: #e6e6e6;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  max-width: 300px;
   width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -151,30 +147,35 @@ body {
 .form-box label {
   margin-bottom: 5px;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .form-box input {
-  padding: 8px;
+  padding: 12px;
+  width: 93%;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 .botao-azul {
   background-color: #2563eb;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   margin-bottom: 10px;
+  width: 100%;
   transition: background 0.3s ease;
 }
 
 .botao-azul:hover {
   background-color: #1e4bb8;
 }
+
 
 /* ----------------------------
    RESPONSIVIDADE

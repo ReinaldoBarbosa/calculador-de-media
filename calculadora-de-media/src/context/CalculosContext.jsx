@@ -6,7 +6,8 @@ export const CalculosProvider = ({ children }) => {
   const [calculos, setCalculos] = useState([]);
 
   const adicionarCalculo = (materia, notas) => {
-    const media = notas.reduce((acc, n) => acc + parseFloat(n), 0) / notas.length;
+    const [np1, np2, np3] = notas.map(n => parseFloat(n)); 
+    const media = ((np1 * 4) + (np2 * 4) + (np3 * 2)) / 10;
     const novoCalculo = { materia, notas, media };
 
     console.log("Novo cálculo adicionado:", novoCalculo);
