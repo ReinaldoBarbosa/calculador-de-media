@@ -1,0 +1,6 @@
+[
+  { "id": 1, "materia": "Estrutura de dados em Python", "nota": 6.0 },
+  { "id": 2, "materia": "Programação Orientada a Objetos", "nota": 8.5 },
+  { "id": 3, "materia": "Banco de Dados", "nota": 7.2 },
+  { "id": 4, "materia": "Redes de Computadores", "nota": 5.8 }
+]

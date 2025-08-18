@@ -1,0 +1,48 @@
+.botao {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #007bff; /* azul padrão */
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s ease, transform 0.2s ease;/* adapta ao conteúdo */
+   max-width: 95%; /* não ultrapassa a tela em dispositivos pequenos */
+}
+
+.botao:hover {
+   background-color: #0056b3; /* azul escuro no hover */
+   transform: scale(1.05);
+}
+
+.botao a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: 500;
+   text-align: center;
+   display: block;
+   width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+   .botao {
+      padding: 8px 15px;
+   }
+
+   .botao a {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 480px) {
+   .botao {
+      padding: 6px 12px;
+      border-radius: 6px;
+      max-width: 93%;
+   }
+
+   .botao a {
+      font-size: 14px;
+   }
+}
